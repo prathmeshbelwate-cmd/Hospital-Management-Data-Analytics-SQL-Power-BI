@@ -50,16 +50,35 @@ The SQL analysis was transformed into an interactive Power BI dashboard containi
 
 ## 💡 Key Insights
 
-- 👨‍⚕️ **Doctor Demand:** Identify which doctors handle the highest number of appointments and understand workload distribution.
-- 🩺 **Specialization Trends:** Discover which medical specializations have the greatest patient demand.
-- 📅 **Appointment Patterns:** Track monthly appointment trends and identify periods of higher hospital activity.
-- 🚦 **Appointment Status:** Compare completed, scheduled, cancelled and no-show appointments to understand appointment efficiency.
-- ⚠️ **No-Show & Cancellation Watch:** Identify doctors or areas with relatively higher cancellation/no-show rates that may require attention.
-- 👥 **Patient Activity:** Find patients with frequent appointments and understand recurring hospital usage.
-- 💰 **Treatment Cost:** Compare treatment types based on total and average costs to identify major cost contributors.
-- 💳 **Billing Overview:** Analyze billing amounts and payment statuses to understand the hospital's financial activity.
-- 🏆 **Doctor Ranking:** Rank doctors within their specializations to compare appointment performance using SQL window functions.
 
+- 🏥 **Low Appointment Completion:** Out of **200 appointments**, only **46 (23%)** were completed, while **52 (26%)** were no-shows and **51 (25.5%)** were cancelled — resulting in **51.5% of appointments being lost** to no-shows or cancellations.
+
+  
+- 👨‍⚕️ **Top Doctor:** **Sarah Taylor** handled the highest number of appointments with **29**, making her the top doctor by appointment volume.
+
+  
+- 🩺 **Specialization Demand:** **Pediatrics (47 patients)** had the highest patient volume, followed by **Dermatology (37)** and **Oncology (22)**.
+
+  
+- 💊 **Treatment Volume:** **Chemotherapy (~32 patients)** and **ECG (~31 patients)** were the most frequently administered treatments.
+
+  
+- 💰 **Major Revenue Contributors:** **Chemotherapy ($128.85K)** generated the highest treatment value, followed by **MRI ($116.10K)** and **X-Ray ($110.65K)**. Together, they contributed approximately **64.5% of the total $551.25K**.
+
+  
+- 🧲 **Highest Average Treatment Cost:** **MRI** had the highest average treatment cost at approximately **$3.2K**, despite having lower treatment volume (~22 patients).
+
+  
+- 💳 **Payment Risk:** **Failed payments (~$192K)** were higher than pending (~$185K) and paid (~$173K), highlighting a significant payment collection issue.
+
+  
+- 📅 **Monthly Demand Fluctuation:** Appointments peaked at **25 in April** and fell to approximately **11 in September**, showing substantial variation in monthly demand.
+
+  
+- 🛡️ **Insurance Distribution:** **MedCare Plus (18 patients)** and **WellnessCorp (16 patients)** were the largest insurance providers, together accounting for **68% of the 50 patients shown**.
+
+  
+- 🎯 **Overall Business Insight:** The biggest opportunity is to **reduce the 26% no-show and 25.5% cancellation rates**, while improving payment collection and optimizing high-value treatments such as **Chemotherapy and MRI**.
 ## 🧠 What I Learned
 
 This project helped me understand more than just writing SQL queries:
